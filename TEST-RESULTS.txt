@@ -1,0 +1,7 @@
+PERCENT — V2 validation
+
+PASS — JavaScript syntax (node --check).
+PASS — Existing design assets preserved from V1; local script, stylesheet and imagery bundled.
+PASS — Isolated Chromium inline fixture (actual HTML/CSS/JS and embedded copies of WebP images), 390x844 and 1366x900, reduced-motion preference: homepage has no carousel arrow buttons; mouse drag changes Latest Drop and Try the Look; tap opens correct product; size validation; nested size guide/drawer; adding to bag; modal close preserves exact viewport (701 -> 701 and 914 -> 914 px), same DOM and active rail color; Escape closes modal; mobile menu and desktop profile navigation; Orders and Addresses tabs; no uncaught JavaScript errors.
+PASS — Isolated Chromium inline fixture, 390x844 emulated touch and normal motion: finger gestures change Latest Drop and Try the Look, scroll Best Sellers; drag does not open overlay; tapping opens and cross closes overlay; no uncaught JavaScript errors. Fixed bubbling of implicit touch pointer capture loss during drag based on this test.
+LIMITATION — File URL navigation remains blocked by the managed browser policy, so tests are an inline synthetic fixture, not an end-to-end run of the extracted files from disk. Browser storage persistence, mobile physical-device motion quality and actual animation frame timing still need local testing. No real Shopify, auth, payments or 3D assets are integrated.
