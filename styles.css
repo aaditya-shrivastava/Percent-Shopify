@@ -76,3 +76,7 @@ html{scrollbar-gutter:stable}
 /* V5 — hanging rail turns with position; the hanger and garment rotate together. */
 .rail-item{transform:translate3d(calc(-50% + var(--dx,0px)),var(--dy,0px),0) scale(var(--scale,1)) perspective(900px) rotateY(var(--rail-yaw,0deg));transform-origin:50% 0;backface-visibility:hidden}
 @media(prefers-reduced-motion:reduce){.rail-item{transition:none!important}}
+
+/* Align every hook with the same quadratic curve as the visible rail. */
+.rail-curve{left:0;top:calc(19% - 20px);width:100%;height:40px;border:0;border-radius:0;overflow:visible;fill:none;stroke:#aca4a9;stroke-width:2px}.rail-item{top:19%;transform-origin:50% 0}.rail-item .hanger{position:absolute;left:50%;top:-8px;width:80px;height:46px;transform:translateX(-50%);border:0;border-radius:0;z-index:0;fill:none;stroke:#777;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}.rail-item .hanger:before{content:none}.rail-item img{position:absolute;top:25px;left:0;width:100%;height:calc(100% - 25px);object-fit:contain;object-position:center top;z-index:1}.rail-item.sway img{animation:none}
+@media(max-width:650px){.rail-item{height:76%}.rail-item img{width:100%;height:calc(100% - 25px)}}
